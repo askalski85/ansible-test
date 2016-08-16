@@ -1,0 +1,54 @@
+---
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: a
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  vars:
+    - test_variable_a: "value from playbook a"
+  roles:
+    - role: a
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: a
+      test_variable_a: "value from playbook a"
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: b
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: c
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: b
+      test_variable_a: "value from playbook a"
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: c
+      test_variable_a: "value from playbook a"
+
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  roles:
+    - role: d

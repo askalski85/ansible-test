@@ -1,0 +1,4 @@
+---
+dependencies:
+  - role: a
+    test_variable_a: "from meta c"

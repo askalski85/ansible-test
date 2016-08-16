@@ -1,0 +1,5 @@
+---
+
+- name: "Print child of child param"
+  debug:
+    msg: "{{ lala }}"
